@@ -486,7 +486,7 @@ func (l *Conn) Ping() error {
   if channel == nil {
     return NewError(ErrorNetwork, errors.New("ldap: could not send message"))
   }
-  defer l.finishMessage(messageID)
+  /*defer l.finishMessage(messageID)*/
 
   if l.Debug {
     if err := addLDAPDescriptions(packet); err != nil {
